@@ -3,21 +3,21 @@
 
 * {
     font-family: "Inter", sans-serif;
-
+    scroll-behavior: smooth ;
 }
 
 .plus-jakarta-font {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.slider-sm-screen .slick-track {
+.know-more-small-screen .slick-track {
     gap: 40px !important;
     display: flex !important;
     min-height: 144px !important;
     align-items: center !important;
 }
 
-.slider-sm-screen .slick-track .slick-current img {
+.know-more-small-screen .slick-track .slick-current img {
     height: 144px !important;
     max-width: 193px !important;
     width: 100;
@@ -25,15 +25,15 @@
     border-radius: 4px !important;
 }
 
-.slider-box .slick-track {
+.features-slider .slick-track {
     display: flex !important;
     gap: 35px !important;
 }
 
-.slider-box .slick-track .slick-slide {
+.features-slider .slick-track .slick-slide {
     max-width: 460px !important;
 }
 
-.slider-box .slick-next .slick-prev {
+.features-slider .slick-next .slick-prev {
     display: none;
 }
