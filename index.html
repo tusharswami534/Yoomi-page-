@@ -32,14 +32,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="./tailwind.config.js">
+  <script>
+    tailwind.config = {
+  theme: {
+    boxShadow: {
+      'container-shadow': '0px 2.92px 65.73px 0px #0000000F',
+      'card-shadow': '0px 13px 18px 0px #0000000F',
+      'table-shadow': '0px 26px 27px 0px #0000000A',
+      'tracking-feedback': '0px -0.92px 17.51px 0px #0000001A',
+      'workout' : '0px 2.92px 65.73px 0px #0000000F',
+
+    },
+    extend: {
+      fontSize: {
+        '3xl': '32px',
+        '4xl': '40px',
+        '5xl': '52px',
+        '50px' : '50px',
+      },
+      colors: {
+        "dark-aquamarine": "#076787",
+        "gravel": "#4D4D4D",
+        "gull-grey": "#82B2C2",
+        "ghost-white": "#F5F8FA",
+        "glacier": "#85B6A6",
+        "white-rock": "#E6E6E6",
+        "gunmetal": "#333434",
+        "friar-grey": "#808080",
+        "pale-grey": "#F8FDFF",
+        "vampire-grey": "#4B4C4D",
+        "off-green": "#ECF5F8",
+        "carolina-blue": "#98C1CF",
+        "light-grey": "#D6D9D8",
+        "lily-white": "#EDF6F9",
+      },
+      container: {
+        center: true,
+        screens: {
+          sm: "992px",
+          "2xl": "1140px",
+        },
+      },
+    },
+  },
+};
   </script>
 </head>
 <body>
   <!-- Header  -->
   <header class="bg-pale-grey">
     <div class="container mx-auto">
-      <nav class="pt-8 flex px-3 justify-between items-center">
+      <nav class="pt-6 flex px-3 justify-between items-center">
         <a href="/">
           <img src="./assets/images/svg/logo.svg" alt="logo" />
         </a>
@@ -55,9 +98,9 @@
         <div id="mobile-view"
           class="flex gap-7 items-center z-40 max-md:fixed max-md:w-full max-md:h-full max-md:justify-center max-md:items-center max-md:-top-full max-md:-right-full transition-all duration-300 max-md:bg-white">
           <ul class="list-none flex gap-11 max-xl:gap-8 text-center max-md:flex-col flex-row">
-            <li><a class="font-medium text-black hover:text-dark-aquamarine relative after:absolute after:left-0 after:bg-dark-aquamarine after:w-0 after:h-0.5 after:bottom-0 after:hover:w-full after:transition-all duration-300" href="#amazing-features">About Us</a></li>
-            <li><a class="font-medium text-black hover:text-dark-aquamarine relative after:absolute after:left-0 after:bg-dark-aquamarine after:w-0 after:h-0.5 after:bottom-0 after:hover:w-full after:transition-all duration-300" href="#tracking-feedback">News</a></li>
-            <li><a class="font-medium text-black hover:text-dark-aquamarine relative after:absolute after:left-0 after:bg-dark-aquamarine after:w-0 after:h-0.5 after:bottom-0 after:hover:w-full after:transition-all duration-300" href="#reporting">Contact Us</a></li>
+            <li><a class="font-medium text-black text-lg hover:text-dark-aquamarine relative after:absolute after:left-0 after:bg-dark-aquamarine after:w-0 after:h-0.5 after:bottom-0 after:hover:w-full after:transition-all duration-300" href="#amazing-features">About Us</a></li>
+            <li><a class="font-medium text-black text-lg hover:text-dark-aquamarine relative after:absolute after:left-0 after:bg-dark-aquamarine after:w-0 after:h-0.5 after:bottom-0 after:hover:w-full after:transition-all duration-300" href="#tracking-feedback">News</a></li>
+            <li><a class="font-medium text-black text-lg hover:text-dark-aquamarine relative after:absolute after:left-0 after:bg-dark-aquamarine after:w-0 after:h-0.5 after:bottom-0 after:hover:w-full after:transition-all duration-300" href="#reporting">Contact Us</a></li>
             <li class="md:hidden">
               <button
                 class="md:hidden py-3 px-4 bg-dark-aquamarine text-white hover:bg-white border border-solid transition-all duration-300 rounded hover:border-dark-aquamarine hover:text-dark-aquamarine">
@@ -87,29 +130,30 @@
           class="absolute bottom-[-11%] right-[20%]  max-sm:max-w-12 pointer-events-none">
         <div class="container px-3 pb-[129px] relative mx-auto ">
           <h1
-            class="text-[52px] leading-[110%] text-center mx-auto pt-[122px] max-lg:text-5xl  max-md:text-4xl max-sm:text-3xl max-w-[819px]">
-            <span class="font-bold "> Next Generation</span> Patient Engagement and RTM Solution✨
+            class="text-[52px]   leading-[110%] text-center mx-auto pt-[122px] max-lg:text-5xl  max-md:text-4xl max-sm:text-3xl max-w-[819px]">
+            <span class="font-bold "> Next Generation</span> Patient Engagement and RTM Solution  <span class="">  <img class="max-w-[74px] max-h-[56px]" src="./assets/images/webp/emoji.webp" alt="images"> </span>
           </h1>
           <p class="text-2xl max-md:text-xl max-sm:text-lg  text-vampire-grey leading-[110%] text-center pt-3">Industry
             leading AI motion-tracking technology</p>
           <div style="box-shadow: 0px 4px 15px 0px #07678726;
 " class="bg-white mt-[57px] mx-auto px-1  rounded marker: flex justify-between max-sm:max-w-[300px] max-sm:mx-auto   py-1.5 max-w-[428px] ">
             <input
-              class="w-[65%] outline-none pl-1 placeholder:text-dark-aquamarine max-sm:placeholder:text-xs font-medium"
+              class="w-[65%] outline-none pl-1 placeholder:text-gravel max-sm:placeholder:text-xs font-medium"
               type="email" placeholder="Enter Your Email ">
             <button class="py-3 px-4 hover:bg-white border-solid border-transparent hover:border-black hover:text-dark-aquamarine border transition-all duration-300 border-bg-dark-aquamarine bg-dark-aquamarine text-white font-bold max-sm:text-xs  rounded">Get
               Started</button>
-          </div>
-        </div>
+          </div> 
+      </div>
       </div>
       <div class="bg-dark-aquamarine h-[28px] w-full border-t-2 border-t-carolina-blue border-b-2 border-b-light-grey">
       </div>
       <div class="w-full bg-white">
         <div class="w-full px-3 bg-lily-white min-h-[198px]"></div>
-        <div class="container flex justify-center rounded-[29px]  mt-[-150px]">
+        <div class="container flex justify-center rounded-[29px]  mt-[-100px]">
           <div class="w-max  relative">
-            <img src="./assets/images/webp/hero-section-image.webp"
-              class="relative shadow-container-shadow pointer-events-none rounded-[29px] max-w-[1051px]  w-full z-10"
+            <img src="./assets/images/svg/hero-layer.svg" alt="layet" class="absolute  left-1/2 -translate-x-1/2 top-[-8%]">
+            <img src="./assets/images/webp/hero-section-img.webp"
+              class="relative shadow-workout  pointer-events-none rounded-[29px]  max-w-[1051px]  w-full z-10"
               alt="hero-section-image">
           </div>
         </div>
@@ -118,7 +162,7 @@
     <!-- Extensive Exercise Library Sldier Section  -->
     <section id="amazing-features" class="pb-12 pt-[126px] max-lg:pt-24 max-sm:pt-14 relative">
       <div class="max-w-[724px] max-sm:mb-5 px-3 max-md:mb-0 mb-14 mx-auto">
-        <p class="text-dark-aquamarine text-center font-medium text-base max-md:text-sm max-sm:text-xs">
+        <p class="text-dark-aquamarine uppercase text-center font-medium text-base max-md:text-sm max-sm:text-xs">
           Features
         </p>
         <p
@@ -134,8 +178,8 @@
         class="container relative z-50 bg-white  pl-3 pt-[108px] max-lg:pt-24 max-md:pt-16 max-sm:pt-14 overflow-x-hidden shadow-table-shadow rounded-[32px]  mx-auto">
         <div class="flex flex-wrap max-lg:flex-col">
           <div class="w-6/12 pl-5  max-lg:pb-16 max-lg:w-full">
-            <p class="text-dark-aquamarine  font-medium text-base max-md:text-sm max-sm:text-xs">
-              Features
+            <p class="text-dark-aquamarine uppercase font-medium text-base max-md:text-sm max-sm:text-xs">
+              Library
             </p>
             <p
               class="text-3xl max-md:text-2xl max-sm:text-xl font-normal mt-2 plus-jakarta-font  max-sm:mt-1  leading-[120%]">
@@ -175,7 +219,7 @@
                 <img class="w-full" src="./assets/images/webp/first-slider-image.webp" alt="slider">
               </div>
             </div>
-            <div class="flex slick-arrow-buttons gap-3 pt-6 pb-12 relative z-30 mx-3">
+            <div class="flex slick-arrow-buttons gap-3 pt-6 pb-12 relative z-30 mr-3">
               <button
                 class="prev border hover:bg-dark-aquamarine border-black  bg-white items-center flex justify-center w-9 h-9 rounded-full cursor-pointer transition-all ease-linear duration-200 ">
                 <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -203,9 +247,9 @@
         <div class="flex flex-wrap ">
           <div class="w-7/12 max-lg:w-full justify-center  flex items-center max-lg:justify-center">
             <div class="relative w-max">
-              <img src="./assets/images/webp/tracking-feedback.webp" alt="girl" width="217"
-                class="absolute max-md:hidden pointer-events-none  -top-[14%] -left-[11%]">
-              <img class="max-w-[490px] max-md:w-full pointer-events-none" src="./assets/images/webp/yoga-image.webp" alt="yoga-image">
+              <img src="./assets/images/webp/tracking-feedback.webp" alt="girl" width="250"
+                class="absolute max-md:hidden pointer-events-none  -top-[19%] -left-[11%]">
+              <img class="max-w-[490px] max-md:w-full lg:mr-10 pointer-events-none shadow-tracking-feedback" src="./assets/images/webp/yoga-image.webp" alt="yoga-image">
               <img src="./assets/images/webp/circle-img.webp" alt="circle-img"
                 class="absolute  max-md:hidden pointer-events-none -right-[8%] -top-[14%]">
             </div>
@@ -274,9 +318,9 @@
           </div>
           <div class="max-lg:w-full max-lg:justify-center max-lg:flex pb-12 pt-24 max-md:py-8  w-6/12">
             <div class="relative w-max">
-              <img width="549" src="./assets/images/webp/graph-table.webp" alt="table-graph" class="shadow-table-shadow">
-              <img src="./assets/images/webp/graph.webp" alt="graph"
-                class="absolute  max-sm:hidden top-[-13%] left-[-11%]">
+              <img width="549" src="./assets/images/webp/graph-table.webp" alt="table-graph">
+              <img  src="./assets/images/webp/graph.webp" alt="graph"
+                class="absolute shadow-tracking-feedback max-sm:hidden top-[-13%] left-[-11%]">
               <img src="./assets/images/webp/days-graph.webp" alt="days-graph"
                 class="absolute max-sm:hidden  right-0 bottom-[-17%]">
             </div>
@@ -304,7 +348,7 @@
           <div class="relative px-[60px] py-10 rounded bg-glacier ">
             <img src="./assets/images/svg/card-logo.svg" alt="card-logo" class="absolute bottom-0 right-0">
             <div class="flex flex-col">
-              <p class="font-semibold leading-[110%] text-6xl text-white text-center max-lg:text-5xl max-md:text-4xl ">
+              <p class="font-semibold leading-[110%] text-50px text-white text-center max-lg:text-5xl max-md:text-4xl ">
                 50%</p>
               <p class="leading-[150%] text-xl max-lg:min-w-[144px]  text-white max-w-[148px] max-sm:text-base mx-auto text-center ">Reduction
                 in Pain</p>
@@ -313,7 +357,7 @@
           <div class="relative px-10 py-10 rounded bg-gull-grey ">
             <img src="./assets/images/svg/card-logo.svg" alt="card-logo" class="absolute bottom-0 right-0">
             <div class="flex flex-col">
-              <p class="font-semibold leading-[110%] text-6xl text-white text-center max-lg:text-5xl max-md:text-4xl ">
+              <p class="font-semibold leading-[110%] text-50px text-white text-center max-lg:text-5xl max-md:text-4xl ">
                 90%</p>
               <p class="leading-[150%] text-xl text-white max-w-[184px] max-sm:text-base mx-auto text-center ">Increase
                 In-Patient Satisfaction</p>
@@ -322,7 +366,7 @@
           <div class="relative px-[57px] py-[55px] rounded bg-dark-aquamarine ">
             <img src="./assets/images/svg/card-logo.svg" alt="card-logo" class="absolute bottom-0 right-0">
             <div class="flex flex-col">
-              <p class="font-semibold leading-[110%] text-6xl text-white text-center max-lg:text-5xl max-md:text-4xl ">
+              <p class="font-semibold leading-[110%] text-50px text-white text-center max-lg:text-5xl max-md:text-4xl ">
                 60%</p>
               <p class="leading-[150%] max-lg:min-w-[144px] text-xl text-white max-w-[184px] mx-auto max-sm:text-base text-center ">Faster
                 Recovery</p>
@@ -390,19 +434,19 @@
           <!--Know More big Screen -->
           <div class="max-w-[946px] w-full h-full max-h-[473px] know-more-big-screen mx-auto">
             <div>
-              <img class="w-full max-h-[473px] rounded-2xl" src="./assets/images/webp/footer-slider-img-1.webp"
+              <img class="w-full max-h-[473px] object-cover rounded-2xl" src="./assets/images/webp/footer-slider-img-1.webp"
                 alt="slider image 1">
             </div>
             <div>
-              <img class="w-full max-h-[473px] rounded-2xl" src="./assets/images/webp/footer-slider-img-2.webp"
+              <img class="w-full max-h-[473px] object-cover rounded-2xl" src="./assets/images/webp/footer-slider-img-2.webp"
                 alt="slider image 2">
             </div>
             <div>
-              <img class="w-full max-h-[473px] rounded-2xl" src="./assets/images/webp/footer-slider-img-1.webp"
+              <img class="w-full max-h-[473px] object-cover rounded-2xl" src="./assets/images/webp/footer-slider-img-1.webp"
                 alt="slider image 3">
             </div>
             <div>
-              <img class="w-full max-h-[473px] rounded-2xl" src="./assets/images/webp/footer-slider-img-3.webp"
+              <img class="w-full max-h-[473px] object-cover rounded-2xl" src="./assets/images/webp/footer-slider-img-3.webp"
                 alt="slider image 4">
             </div>
           </div>
@@ -434,8 +478,8 @@
       <div class="container overflow-hidden rounded-[32px] relative bg-dark-aquamarine">
         <img src="./assets/images/svg/footer-bottom-logo.svg" alt="footer-bottom-logo"
           class="absolute bottom-0 right-0">
-        <div class="flex flex-wrap">
-          <div class="w-6/12 relative max-lg:py-12 z-10 justify-center items-center flex max-lg:w-full">
+        <div class="flex max-lg:flex-wrap">
+          <div class="w-6/12 ml-2 relative max-lg:py-12 z-10 justify-center items-center flex max-lg:w-full">
             <div class="max-w-[441px]">
               <a href="/">
                 <img class="max-sm:max-w-44" src="./assets/images/svg/footer-logo.svg" alt="footer-logo">
@@ -443,18 +487,18 @@
               <p class="plus-jakarta-font md:pt-7  leading-[110%] max-sm:pt-2 text-[30px] max-md:text-2xl max-sm:text-xl text-white">
                 Sign Up to Join <span class="font-semibold"> Our Newsletter </span></p>
               <div
-                class="bg-white mt-12 px-1 rounded marker: flex justify-between py-1.5 max-sm:max-w-[300px] max-sm:mx-auto max-sm:w-full max-w-[428px] ">
+                class="bg-white mt-12 px-0.5 rounded marker: flex justify-between py-0.5 max-sm:max-w-[300px] max-sm:mx-auto max-sm:w-full max-w-[428px] ">
                 <input
-                  class="w-[65%] outline-none pl-1 placeholder:text-dark-aquamarine max-sm:placeholder:text-xs font-medium"
+                  class="w-[65%] outline-none pl-3 placeholder:text-dark-aquamarine max-sm:placeholder:text-xs font-medium"
                   type="email" placeholder="Enter Your Email ">
-                <button class="py-3 whitespace-nowrap px-4 hover:bg-white hover:text-dark-aquamarine hover:border-black border-2 transition-all duration-300 border-bg-dark-aquamarine bg-dark-aquamarine max-sm:text-xs text-white font-bold rounded">Get
+                <button class="py-3 whitespace-nowrap px-4 hover:bg-white hover:text-dark-aquamarine hover:border-black border-transparent border-2 transition-all duration-300 border-bg-dark-aquamarine bg-dark-aquamarine max-sm:text-xs text-white font-bold rounded">Get
                   Started</button>
               </div>
             </div>
           </div>
           <div
             class="w-6/12  pt-7 pb-5 flex items-center justify-center max-lg:absolute max-lg:left-1/2 max-lg:blur-sm max-lg:-translate-x-1/2">
-            <img class="max-w-80 pointer-events-none" src="./assets/images/webp/our-newsletter-image.webp" alt="Our Newsletter">
+            <img class="max-w-[300px] pointer-events-none" src="./assets/images/webp/our-newsletter-image.webp" alt="Our Newsletter">
           </div>
         </div>
       </div>
@@ -462,12 +506,12 @@
   </main>
   <!-- footer -->
   <footer class="bg-black relative ">
-    <img src="./assets/images/svg/footer-left.svg" alt="logo" class="absolute max-lg:hidden top-1/2 left-0">
+    <img src="./assets/images/svg/footer-left.svg" alt="logo" class="absolute max-lg:hidden pointer-events-none top-1/2 left-0">
     <div class="container px-3 pt-[195px] pb-10 mx-auto">
       <div class="flex flex-wrap ">
         <div class="w-7/12 max-lg:w-full">
           <a href="/">
-            <img class="pointer-events-none max-sm:max-w-44" src="./assets/images/svg/footer-logo.svg"
+            <img class="pointer-events-none max-sm:max-w-44" src="./assets/images/svg/yoomi-footer-logo.svg "
               alt="footer-logo">
           </a>
           <p class="text-white lg:max-w-[277px] font-light leading-[150%] pt-7">I'm a paragraph. Click here to add your
